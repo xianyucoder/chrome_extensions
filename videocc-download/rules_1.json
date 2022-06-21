@@ -1,0 +1,9 @@
+[{
+  "id" : 1,
+  "priority": 1,
+  "action" : { "type" : "redirect", "redirect": { "extensionPath": "/player.js" } },
+  "condition" : {
+    "urlFilter" : "player.js",
+    "resourceTypes" : ["script"]
+  }
+}]

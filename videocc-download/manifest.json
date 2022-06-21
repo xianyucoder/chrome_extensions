@@ -1,0 +1,58 @@
+{
+  "name": "视频下载",
+  "description": "获取m3u8加密key 以及 vi",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request":{
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules_1.json"
+    }]
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "*://*/*",
+    "storage",
+    "activeTab",
+    "fileSystemProvider",
+    "scripting",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.weplanning.cn/*"],
+      "js": ["jquery-3.6.0.min.js","content.js"],
+      "css": ["css/key-show.css"]
+    }
+  ],
+  "web_accessible_resources":[{
+    "resources": ["options.html","player.js"],
+    "matches": ["<all_urls>"]
+  }],
+  "host_permissions": [
+    "*://*.baidu.com/*",
+    "*://*.weplanning.cn/*",
+    "*://*.polyv.net/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/get_started16.png",
+      "32": "/images/get_started32.png",
+      "48": "/images/get_started48.png",
+      "128": "/images/get_started128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/get_started16.png",
+    "32": "/images/get_started32.png",
+    "48": "/images/get_started48.png",
+    "128": "/images/get_started128.png"
+  },
+  "options_page": "options.html"
+}

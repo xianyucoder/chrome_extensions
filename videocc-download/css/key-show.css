@@ -1,0 +1,9 @@
+#key-show{
+
+    height: 400px;
+    width: 400px;
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    background: greenyellow;
+}
