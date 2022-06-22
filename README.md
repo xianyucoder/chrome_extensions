@@ -13,6 +13,8 @@ www.sciconf.cn
 
 www.weplanning.cn
 
+www.wyzc.com
+
 使用方法：
 
 1.安装插件
