@@ -25,7 +25,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["*://*.weplanning.cn/*"],
+      "matches": ["*://*.weplanning.cn/*","*://*.sciconf.cn/*"],
       "js": ["jquery-3.6.0.min.js","content.js"],
       "css": ["css/key-show.css"]
     }
@@ -37,6 +37,7 @@
   "host_permissions": [
     "*://*.baidu.com/*",
     "*://*.weplanning.cn/*",
+    "*://*.sciconf.cn/*",
     "*://*.polyv.net/*"
   ],
   "action": {
